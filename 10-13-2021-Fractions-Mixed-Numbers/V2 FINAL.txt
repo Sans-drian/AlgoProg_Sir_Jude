@@ -1,0 +1,41 @@
+import math
+
+numor = int(input("Please enter a numerator above 0: "))
+
+while numor < 1: #checks if the input is less than 0
+    numor = int(input("Please re-enter a numerator that's above 0: ")) #if input is detected as less than 0, it will keep asking this.
+
+
+demor = int(input("Please enter a denominator above 0: "))
+
+while demor < 1: #checks if the input is less than 0
+    demor = int(input("Please re-enter a denominator that's above 0: ")) #if input is detected as less than 0, it will keep asking this.
+
+
+Calcgcd = math.gcd(numor, demor)
+#print(Calcgcd)
+
+if numor < demor: #checks if numerator is less than denominator
+    print(f"{numor} and {demor} makes a proper fraction") 
+    if Calcgcd == 1: #if the gcd is equal to 1
+        print("Though, this proper fraction cannot be reduced")
+    else: #if the gcd is not equal to 1
+        numor //= Calcgcd
+        demor //= Calcgcd
+        print(f"Oh, and also, this proper fraction can be reduced, and the result is: {numor}/{demor}")
+
+else:
+    print(f"{numor} and {demor} makes a improper fraction") 
+    if Calcgcd == 1: #if the gcd is equal to 1
+        print("Though, this improper fraction cannot be reduced")
+    else: #if the gcd is not equal to 1
+        numor //= Calcgcd
+        demor //= Calcgcd
+        print(f"Though, this improper fraction can be reduced, and the result is: {numor}/{demor}")
+    
+    wholNum = numor // demor #Floor divide the numerator and denominator to find the whole number
+    remain = numor % demor #Find the remainder of the division of the numerator and denominator
+    if remain == 0: #if the remainder is 0
+        print(f"The whole number of this improper fraction is {wholNum}")
+    else:
+       print(f"The mixed fraction of this improper fraction is {wholNum} {remain}/{demor}") 
