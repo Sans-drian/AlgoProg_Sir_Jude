@@ -1,0 +1,28 @@
+import math
+
+numor = int(input("Please enter a numerator above 0: "))
+
+while numor < 1: #checks if the input is less than 0
+    numor = int(input("Please re-enter a numerator that's above 0: ")) #if input is detected as less than 0, it will keep asking this.
+
+
+demor = int(input("Please enter a denominator above 0: "))
+
+while demor < 1: #checks if the input is less than 0
+    demor = int(input("Please re-enter a denominator that's above 0: ")) #if input is detected as less than 0, it will keep asking this.
+
+
+Calcgcd = math.gcd(numor, demor)
+print(Calcgcd)
+
+if numor < demor: #checks if numerator is less than denominator
+    print("These numbers make a proper fraction") 
+    if Calcgcd == 1: #if the gcd is equal to 1
+        print("This fraction cannot be reduced")
+    elif Calcgcd != 1: #if the gcd is not equal to 1
+        numor //= Calcgcd
+        demor //= Calcgcd
+        print(f"This fraction has been reduced. {numor}/{demor}")
+else:
+    print("These numbers make an improper fraction")
+
