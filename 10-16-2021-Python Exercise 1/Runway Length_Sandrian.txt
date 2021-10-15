@@ -1,0 +1,13 @@
+print("We'll calculate the minimum runway length depending on the plane's acceleration.")
+print("")
+print("The formula to do that is: \n \n v^2 \n---- \n 2a \n \nWhere 'v' is the velocity and 'a' is the acceleration \n")
+
+plSpeed = float(input("What's the plane's take off speed in m/s?: "))
+plAcc = float(input("What's the plane's acceleration in m/s?: "))
+
+vel = (plSpeed ** 2)
+dblacc = (plAcc * 2)
+
+result = (vel / dblacc)
+
+print(f"The minimum runway length needed is {result} meters")

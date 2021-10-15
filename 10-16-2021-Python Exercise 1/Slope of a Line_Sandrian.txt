@@ -1,0 +1,12 @@
+print("I'll help you calculate: \n \ny2 - y1 \n-------  \nx2 - x1 \n")
+y2 = float(input("Enter the number for y2 = "))
+y1 = float(input("Enter the number for y1 = "))
+x2 = float(input("Enter the number for x2 = "))
+x1 = float(input("Enter the number for x1 = "))
+
+numerator = (y2-y1)
+denominator = (x2-x1)
+
+result = (numerator/denominator)
+
+print(f"\nthe result of \n \n({y2}) - ({y1}) \n--------------  \n({x2}) - ({x1}) \n \nis : {result}")

@@ -1,0 +1,33 @@
+sotal = float(input("Enter the subtotal of your order: $"))
+rate = float(input("Enter the tip amount of your order (in %): "))
+
+tipAm = sotal * (rate / 100)
+total = sotal + tipAm
+
+formSotal = "{:.2f}".format(sotal)
+formrate = "{:.2f}".format(rate)
+formtipAm = "{:.2f}".format(tipAm)
+formTotal = "{:.2f}".format(total)
+
+print(f"Your subtotal is: ${formSotal}")
+print(f"Your tip amount is : ${formtipAm}")
+print(f"Your total amount is : ${formTotal}")
+
+
+#------------ OR USING EVAL INSTEAD OF FLOAT: ---------------------
+
+# sotal = eval(input("Enter the subtotal of your order: $"))
+# rate = eval(input("Enter the tip amount of your order (in %): "))
+
+# tipAm = sotal * (rate / 100)
+# total = sotal + tipAm
+
+# formSotal = "{:.2f}".format(sotal)
+# formrate = "{:.2f}".format(rate)
+# formtipAm = "{:.2f}".format(tipAm)
+# formTotal = "{:.2f}".format(total)
+
+# print(f"Your subtotal is: ${formSotal}")
+# print(f"Your tip amount is : ${formtipAm}")
+# print(f"Your total amount is : ${formTotal}")
+
