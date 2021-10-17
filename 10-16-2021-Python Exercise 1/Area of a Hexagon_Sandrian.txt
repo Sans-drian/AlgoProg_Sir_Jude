@@ -1,0 +1,13 @@
+import math
+
+print("We'll calculate the area of a hexagon using the formula: \n")
+print("3 x √3 \n------ s² \n  2 \n")
+print("'s' being the side of the hexagon \n")
+
+side = float(input("Enter the length of the side of a hexagon: "))
+
+area = (((3*(math.sqrt(3)))/2) * (math.pow(side, 2)))
+
+formatArea = "{:.3f}".format(area)
+
+print(f"\nThe area of a hexagon with side of {side} in length, is: {formatArea}")
