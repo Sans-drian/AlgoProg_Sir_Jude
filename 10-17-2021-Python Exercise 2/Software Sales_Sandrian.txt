@@ -1,0 +1,51 @@
+qty = float(input("How many packages did you purchase?: "))
+
+total = (99*qty)
+totalform = "{:.2f}".format(total)
+
+a1 = total * 0.1
+b1 = total * 0.2
+c1 = total * 0.3
+d1 = total * 0.4
+
+a2 = (total - a1)
+b2 = (total - b1)
+c2 = (total - c1)
+d2 = (total - d1)
+
+e1 = 0
+
+a1format = "{:.2f}".format(a1)
+b1format = "{:.2f}".format(b1)
+c1format = "{:.2f}".format(c1)
+d1format = "{:.2f}".format(d1)
+
+e1format = "{:.2f}".format(e1)
+
+a2format = "{:.2f}".format(a2)
+b2format = "{:.2f}".format(b2)
+c2format = "{:.2f}".format(b2)
+d2format = "{:.2f}".format(b2)
+
+if 10 <= qty <= 19:
+    print(f"Your discount amount is 10%: ${a1format}")
+    print(f"Your total amount will be: ${a2format}")
+
+elif 20 <= qty <= 49:
+    
+    print(f"Your discount amount is 20%: ${b1format}")
+    print(f"Your total amount will be: ${b2format}")
+
+elif 50 <= qty <= 99:
+    print(f"Your discount amount is 30%: ${c1format}")
+    print(f"Your total amount will be: ${c2format}")
+
+elif qty >= 100:
+    print(f"Your discount amount is 40%: ${d1format}")
+    print(f"Your total amount will be: ${d2format}")
+
+else: 
+    print(f"Your discount amount is 0%: ${e1format}")
+    print(f"Your total amount will be: ${totalform}")
+
+print("Thank you for buying whatever it is you're buying.")
