@@ -1,0 +1,11 @@
+print("We'll be calculating the perimeter of a triangle using the sum of its 3 edges \n")
+
+edge1 = float(input("What's the length of the first edge?: "))
+edge2 = float(input("What's the length of the second edge?: "))
+edge3 = float(input("What's the length of the third edge?: "))
+
+if (edge1 + edge2 > edge3) and (edge1 + edge3 > edge2) and (edge2 + edge3 > edge1):
+    print(f"Your inputs are valid. The perimeter of your triangle is: {edge1 + edge2 + edge3}")
+else:
+    print("Cannot calculate perimeter due to invalid input, please try again.")
+    

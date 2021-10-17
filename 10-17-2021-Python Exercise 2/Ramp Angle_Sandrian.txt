@@ -1,0 +1,18 @@
+import math
+
+g = 9.8
+
+massIn = float(input("Enter the mass of cart in kg: "))
+forceIn = float(input("Enter the force of push cart in N: "))
+
+firstCalc = (forceIn/(massIn*g))
+# print(firstCalc)
+
+secCalc = math.asin(firstCalc)
+# print(secCalc)
+
+result = math.degrees(secCalc)
+
+formatRes = "{:.1f}".format(result)
+
+print(f"The angle of the ramp with your inputs {massIn}kg and {forceIn}N is {formatRes} degrees")

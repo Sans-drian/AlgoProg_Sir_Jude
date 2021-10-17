@@ -1,0 +1,24 @@
+import math
+
+aTemp = float(input("Enter the outside temperature that's between -58F and 41F degrees:  "))
+
+while (aTemp < -58) or (aTemp > 41):
+    print("Invalid input, must be between -58F and 41F degrees, try again")
+    aTemp = float(input("Enter the outside temperature that's between -58F and 41F degrees:  "))
+    
+
+windSp = float(input("Enter the wind speed that's greater or equal to 2mph:  "))
+
+while windSp < 3:
+    print("Invalid input, must be greater than or equal to 2, try again")
+    windSp = float(input("Enter the wind speed that's greater or equal to 2mph:  "))
+
+a = math.pow(windSp, 0.16)
+b = 0.6215*(aTemp)
+c = 0.4275*aTemp*a
+
+calc = (35.74 + b) - (35.75*a) + c
+
+formatCalc = "{:.3f}".format(calc)
+
+print(f"The wind chill temperature is: {formatCalc}")
