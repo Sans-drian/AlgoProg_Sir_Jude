@@ -1,0 +1,15 @@
+def convert_temp():
+    f = float(input("What's your temp in Fahrenheit?: ")) #input initial fahrenheit temp
+    conCel = convert_to_celsius(f) #convert fahrenheit to celsius
+    conKel = convert_to_kelvin(conCel) #convert celsius to kelvin
+    print(f"Your temp in Fahrenheit is: {f}") #print
+    print(f"Your temp in Celsius is: {conCel}") #print
+    print(f"Your temp in Kelvin is: {conKel}") #print
+
+def convert_to_celsius(c): #function to convert to celsius
+    return ((5/9)*(c-32)) 
+
+def convert_to_kelvin(k): #function to convert to kelvin
+    return (k + 273.15)
+
+convert_temp() #execute
