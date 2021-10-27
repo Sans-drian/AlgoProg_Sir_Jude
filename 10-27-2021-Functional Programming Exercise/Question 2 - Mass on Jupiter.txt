@@ -1,0 +1,9 @@
+def calc_weight_on_planet(weight): #function
+    calc = ((weight/9.8) * 23.1) #calculate mass and multiply by Jupiter's surface gravity
+    return calc
+
+weight = float(input("What's your weight? Let's try to find your equivalent weight if you were on Jupiter: ")) #input weight
+
+
+calc_weight_on_planet(weight) #execute function
+print(f"Your weight on Jupiter is: {calc_weight_on_planet(weight)}") #print out the result
