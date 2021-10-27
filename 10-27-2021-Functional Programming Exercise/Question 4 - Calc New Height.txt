@@ -1,0 +1,10 @@
+def calc_new_height(): 
+    cuWidth = float(input("Enter the current width: ")) 
+    cuHeight = float(input("Enter the current height: ")) 
+    deWidth = float(input("Enter the desired width: ")) 
+
+    ratio = cuWidth / cuHeight #find the aspect ratio
+    newHeight = deWidth / ratio #find the new height by dividing the desired width with the aspect ratio
+    print(f"Your new height in correspondence to your desired width is: {newHeight}") #print
+
+calc_new_height() #execute
