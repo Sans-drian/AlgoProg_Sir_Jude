@@ -1,0 +1,17 @@
+def get_days(x, y, z): #function to calculate the inputs into days, add them all, and round
+    xcalc = x / 24 #turn hours into days
+    ycalc = y / 1440 #turn minutes into days
+    zcalc = z / 86400 #turn seconds into days
+    add = xcalc + ycalc + zcalc #add all of the inputs
+    roud = round(add, 4) #round the number for add
+    return roud 
+
+def convert_to_days(): 
+    x = float(input("Enter the number of hours: ")) #asking for hours input
+    y = float(input("Enter the number of minutes: ")) #asking for minutes input
+    z = float(input("Enter the number of seconds: ")) #asking for seconds input
+    result = get_days(x, y, z) #execute get_days function
+    print(f"The number of days based on your inputs is: {result}") #print the result
+    
+
+convert_to_days() #exectute convert_to_days function
