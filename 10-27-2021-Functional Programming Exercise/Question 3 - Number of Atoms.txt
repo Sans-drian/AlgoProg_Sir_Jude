@@ -1,0 +1,11 @@
+def num_atoms(amGr, atWeight=196.97): #def function
+    return (amGr/atWeight) *  6.022*pow(10,23) #calculate by dividing the amount of elements(amGr) and atomic weight(atWeight) and multiplying that with the Avogadro's number
+
+num_atoms(amGr=10) #if the amGr is 10
+print(num_atoms(amGr=10)) #print
+
+num_atoms(amGr=10, atWeight=12.001) #if the amGr is 10 and atWeight is 12.001
+print(num_atoms(amGr=10, atWeight=12.001)) #print
+
+num_atoms(amGr=10, atWeight=1.008) # if the amGr is 10 and atWeight is 1.008
+print(num_atoms(amGr=10, atWeight=1.008)) #print
